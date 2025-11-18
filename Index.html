@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce Myself</title>
+
+    <!-- ฟอนต์สวยจาก Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            background: #f3f5f7;
+        }
+
+        /* เมนูด้านบน */
+        nav {
+            background: #111;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: 0.2s;
+        }
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        /* คอนเทนเนอร์กลาง */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* หัวข้อ */
+        h1, h2 {
+            text-align: center;
+            color: #222;
+        }
+
+        /* การ์ด */
+        .card {
+            background: white;
+            padding: 25px;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+        }
+
+        /* โปรไฟล์รูป */
+        .profile-img {
+            display: block;
+            margin: auto;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        /* กล่องรูป + ข้อความ */
+        .flex {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        .flex img {
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        @media(max-width: 768px) {
+            .flex {
+                flex-direction: column;
+                text-align: center;
+            }
+            .flex img {
+                width: 100%;
+            }
+        }
+
+        /* แกลลอรี่ */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 20px;
+            background: black;
+            border-radius: 15px;
+        }
+        .gallery img {
+            width: 220px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- เมนูด้านบน -->
+    <nav>
+        <a href="#intro">Intro</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#hobby">Hobbies</a>
+        <a href="#skills">Skills</a>
+        <a href="#draw">Art</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- โปรไฟล์ -->
+        <div class="card">
+            <h1>My Profile</h1>
+            <img src="meee.jpg" class="profile-img">
+        </div>
+
+        <!-- INTRO -->
+        <div class="card" id="intro">
+            <h2>INTRO</h2>
+            <p><b>รหัสนักศึกษา:</b> 66124630109</p>
+            <p><b>ชื่อ:</b> นางสาว วิภาวี ชาดี</p>
+            <p><b>ชื่อเล่น:</b> แบม</p>
+            <p><b>อายุ:</b> 22 ปี</p>
+            <p><b>วันเกิด:</b> 28 พฤษภาคม 2546</p>
+            <p><b>สาขาที่เรียน:</b> เทคโนโลยีดิจิทัล (เอกวิทยาการคอมพิวเตอร์)</p>
+            <p><b>มหาวิทยาลัย:</b> ราชภัฏเทพสตรี</p>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="card" id="contact">
+            <h2>CONTACT</h2>
+            <p><b>Email:</b> wiphawichadi@gmail.com</p>
+            <p><b>Facebook:</b> Wipawee Chadee</p>
+            <p><b>Instagram:</b> 
+                <a href="https://www.instagram.com/taymin.iiitn" target="_blank">
+                    taymin.iiitn
+                </a>
+            </p>
+            <p><b>Line:</b> 
+                <a href="https://line.me/ti/p/gdFM45DGqa" target="_blank">
+                    0910032239
+                </a>
+            </p>
+            <p><b>TikTok:</b> 
+                <a href="https://www.tiktok.com/@akira.tintin" target="_blank">
+                    akira.tintin
+                </a>
+            </p>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="card" id="about">
+            <h2>ABOUT ME</h2>
+            <p style="text-indent: 40px; line-height: 1.8;">
+                ไม่มีอะไรเลยชีวิต เรียนโง่ ๆ นั่งสมองไหลไปวัน ๆ
+            </p>
+        </div>
+
+        <!-- HOBBIES -->
+        <div class="card" id="hobby">
+            <h2>HOBBIES</h2>
+
+            <div class="flex">
+                <img src="gameee.jpg">
+                <ul>
+                    <li>เล่นเกม</li>
+                    <li>ไถติ้กต่อก</li>
+                    <li>ดูโคนัน</li>
+                    <li>ฟังเพลง</li>
+                    <li>วาดรูป</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="card" id="skills">
+            <h2>SKILLS</h2>
+
+            <div class="flex">
+                <img src="flute.jpg">
+                <ul>
+                    <li>ภาษาจีน HSK2</li>
+                    <li>เล่นเครื่องดนตรี Flute</li>
+                    <li>วาดภาพเหมือน (แต่เบื่อง่าย สมาธิสั้น เลยไม่ค่อยมีงานเสร็จ)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ART GALLERY -->
+        <div class="card" id="draw">
+            <h2>MY ARTWORK</h2>
+            <div class="gallery">
+                <img src="draw2.jpg">
+                <img src="draw3.jpg">
+                <img src="draw4.jpg">
+                <img src="draw1.jpg">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
