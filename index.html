@@ -17,23 +17,23 @@
         }
 
         /* เมนูด้านบน */
-        nav {
+        nav { /* ใช้สำหรับส่วนเมนู*/
             background: #111;
-            padding: 12px 20px;
-            display: flex; /* จัดเมนูเป็นแถวกลาง */
-            justify-content: center; /* จัดกึ่งกลางแนวนอน */
-            gap: 30px; /* ช่องว่างระยะหว่าง */
-            position: sticky; /* ทำให้เมนูไหลติดบน เมื่อเลื่อนหน้า*/
-            top: 0;
-            z-index: 1000; /* เมนูเหนืออปก*/
+            padding: 12px 20px; /* กำหนดระยะขอบภายในบน-ล่าง ซ้าย-ขวา */
+            display: flex; /* จัดอปกย่อยเป็นแถว */
+            justify-content: center; /* จัดอปกย่อยกึ่งกลางแนวนอน */
+            gap: 30px; /* ช่องว่างระยะหว่างของอปกแต่ละอปก */
+            position: sticky; /* ทำให้เมนูไหลติดบนที่กำหนด เมื่อเลื่อนหน้า*/
+            top: 0; /* กำหนดให้ติดขอบบนจอ */
+            z-index: 1000; /* กำหนดให้อยู่ด้านบนอปกอื่น*/
         }
-        nav a {
+        nav a { /* เลือกอปก nav=ลิงก์เมนู a=ที่อยู่ข้างใน */
             color: white;
-            text-decoration: none;
-            font-weight: 400;
-            transition: 0.2s;
+            text-decoration: none; /* ลบเส้นใต้ที่มากับลิงก์*/
+            font-weight: 400; /* กำหนดน้ำหนักตัวอักษร*/
+            transition: 0.2s; /* กำหนดให้มีการเปลี่ยนสีแบบนุมนนวล (ใช้เวลา 0.2 วิ) เมื่อเปลี่ยนคุณสมบัติ */
         }
-        nav a:hover {
+        nav a:hover { /* เลือกอปก nav=เมื่อเมาส์วางอยู่เหนือhover state*/
             color: #00d4ff; /* ลิงก์ปกติสีขาว เมาส์ชีเปลี่ยนสี */
         }
 
@@ -41,7 +41,7 @@
         .container {
             max-width: 900px; /* ขีดจำกัดความกว้าง */
             margin: auto; /* จัดกึ่งกลางเพจแนวนอน */
-            padding: 20px; /* ระยะขอบภายใน */
+            padding: 20px; /* ระยะขอบภายใน รอบคอนเทนเนอร์ */
         }
 
         /* หัวข้อ */
@@ -52,17 +52,17 @@
 
         /* การ์ด */ /* ใช้เพื่อแบ่งเนื้อหาเป็นบล็อก */
         .card {
-            background: white;
-            padding: 25px;
-            margin-top: 30px;
+            background: white; /* สีพื้นหลังของการ์ด */
+            padding: 25px; /* กำหนดระยะขอบภายใน */
+            margin-top: 30px; /* กำหนดระยะห่างด้านบนจากการ์ดก่อนหน้า 30 */
             border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.07);
         }
 
         /* โปรไฟล์รูป */
         .profile-img {
-            display: block;
-            margin: auto;
+            display: block; /* เปลี่ยนรูปแบบการแสดงผลเป็นบล็อก เพื่อให้ใช้margin autoได้*/
+            margin: auto; /* จัดรูปกึ่งกลางแนวนอน*/
             width: 260px;
             height: 260px;
             border-radius: 50%;
@@ -72,17 +72,17 @@
 
         /* กล่องรูป + ข้อความ */ /* เพื่อจัดรูปและข้อความเรียงแนวนอน รูปซ้าย ข้อความขวา*/
         .flex {
-            display: flex;
-            gap: 25px;
-            align-items: center;
+            display: flex; /* จัดอปปกย่อยด้วย flexbox เพื่อจัดเรียงเป็นแถว*/
+            gap: 25px; /* ช่องว่างระหว่างรูปและข้อความ*/
+            align-items: center; /* จัดอปกย่อยให้อยู่กึ่งกลางแนวตั้ง*/
         }
-        .flex img {
-            width: 350px;
+        .flex img { /* เลือกอปก img ที่อยู่ภายใน flex */
+            width: 350px; /* กำหนดความกว้างรูปในส่วน flex*/
             border-radius: 10px; /* กำหนดรูปให้มีมุมโค้ง */
         }
 
-        @media(max-width: 768px) { /* สำหรับความกว้างจอสำหรับมือถือหรือแท็บเล็ตเล็ก ให้เปลี่ยนflexเป็นแนวตั้ง*/
-            .flex {
+        @media(max-width: 768px) { /* สำหรับความกว้างจอสำหรับมือถือหรือแท็บเล็ตเล็ก ให้เปลี่ยนflexเป็นแนวตั้ง*/ /* จะทำงานเมื่อความกว้างจอสูงสุดคือ 768 หรือน้อยกว่า (สำหรับมือถือ/แท็บเล็ต) */
+            .flex { /* เลือก .flex */
                 flex-direction: column;
                 text-align: center;
             }
@@ -93,18 +93,18 @@
 
         /* แกลลอรี่ เป็นรูปแถวเล็ก ๆ*/
         .gallery { 
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+            display: flex; /* ใช้ flexbox เพื่อจัดเรียงรูปภาพเป็นแถว */
+            justify-content: center; /* จัดเรียงรูปภาพให้อยู่กึ่งกลางแนวนอน*/
+            gap: 15px; /* ช่องว่างระหว่างรูปภาพ */
             overflow-x: auto; /* ถ้ารูปเกินคอนเทนเนอร์ สามารถเลื่อนเป็นแนวนอนได้ */
-            padding: 20px;
+            padding: 20px; /* ระยะขอบภายใน */
             background: black;
             border-radius: 15px;
         }
-        .gallery img {
+        .gallery img { /* เลือกรูปภาพที่อยู่ภายใน .gallery */
             width: 220px;
             height: 350px;
-            object-fit: cover;
+            object-fit: cover; /* ทำให้รูปครอบคลุมพื้นที่โดยไม่เสียสัดส่วน*/
             border-radius: 8px;
         }
 
@@ -218,5 +218,6 @@
 
 </body>
 </html>
+
 
 
