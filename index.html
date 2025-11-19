@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        /* สีพื้นหลังกับฟอนต์ */
         body {
             font-family: 'Kanit', sans-serif;
             margin: 0;
@@ -19,12 +20,12 @@
         nav {
             background: #111;
             padding: 12px 20px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            position: sticky;
+            display: flex; /* จัดเมนูเป็นแถวกลาง */
+            justify-content: center; /* จัดกึ่งกลางแนวนอน */
+            gap: 30px; /* ช่องว่างระยะหว่าง */
+            position: sticky; /* ทำให้เมนูไหลติดบน เมื่อเลื่อนหน้า*/
             top: 0;
-            z-index: 1000;
+            z-index: 1000; /* เมนูเหนืออปก*/
         }
         nav a {
             color: white;
@@ -33,23 +34,23 @@
             transition: 0.2s;
         }
         nav a:hover {
-            color: #00d4ff;
+            color: #00d4ff; /* ลิงก์ปกติสีขาว เมาส์ชีเปลี่ยนสี */
         }
 
         /* คอนเทนเนอร์กลาง */
         .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
+            max-width: 900px; /* ขีดจำกัดความกว้าง */
+            margin: auto; /* จัดกึ่งกลางเพจแนวนอน */
+            padding: 20px; /* ระยะขอบภายใน */
         }
 
         /* หัวข้อ */
         h1, h2 {
-            text-align: center;
+            text-align: center; /* หัวข้ออยู่กลางกับสี*/
             color: #222;
         }
 
-        /* การ์ด */
+        /* การ์ด */ /* ใช้เพื่อแบ่งเนื้อหาเป็นบล็อก */
         .card {
             background: white;
             padding: 25px;
@@ -65,11 +66,11 @@
             width: 260px;
             height: 260px;
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: cover; /* ทำให้รูปไม่เสียสัดส่วน */
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
 
-        /* กล่องรูป + ข้อความ */
+        /* กล่องรูป + ข้อความ */ /* เพื่อจัดรูปและข้อความเรียงแนวนอน รูปซ้าย ข้อความขวา*/
         .flex {
             display: flex;
             gap: 25px;
@@ -77,10 +78,10 @@
         }
         .flex img {
             width: 350px;
-            border-radius: 10px;
+            border-radius: 10px; /* กำหนดรูปให้มีมุมโค้ง */
         }
 
-        @media(max-width: 768px) {
+        @media(max-width: 768px) { /* สำหรับความกว้างจอสำหรับมือถือหรือแท็บเล็ตเล็ก ให้เปลี่ยนflexเป็นแนวตั้ง*/
             .flex {
                 flex-direction: column;
                 text-align: center;
@@ -90,12 +91,12 @@
             }
         }
 
-        /* แกลลอรี่ */
-        .gallery {
+        /* แกลลอรี่ เป็นรูปแถวเล็ก ๆ*/
+        .gallery { 
             display: flex;
             justify-content: center;
             gap: 15px;
-            overflow-x: auto;
+            overflow-x: auto; /* ถ้ารูปเกินคอนเทนเนอร์ สามารถเลื่อนเป็นแนวนอนได้ */
             padding: 20px;
             background: black;
             border-radius: 15px;
@@ -217,4 +218,5 @@
 
 </body>
 </html>
+
 
